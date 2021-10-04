@@ -18,6 +18,10 @@ function getDadosEnderecoPorCep(cep) {
       document.getElementById('cidade').value = dadosJSONObj.localidade
       document.getElementById('uf').value = dadosJSONObj.uf
     }
+
+    if(xmlHttp.readyState == 4 && xmlHttp.status == 404){
+      document.getElementById('conteudo').innerHTML = 'Ops... aconteceu um problema, tente mais tarde.'
+    }
   }
   xmlHttp.send()
 }

@@ -1,7 +1,7 @@
 function getDadosEnderecoPorCep(cep) {
   console.log(cep)
 
-  let url = 'http://viacep.com.br/ws/'+cep+'/json/unicodes/'
+  let url = 'http://viacep.com.br/ws/'+cep+'/json/unicode/'
   console.log(url)
 
   let xmlHttp = new XMLHttpRequest()

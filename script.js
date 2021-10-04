@@ -1,7 +1,7 @@
 function getDadosEnderecoPorCep(cep) {
   console.log(cep)
 
-  let url = 'http://viacep.com.br/ws/'+cep+'/json/unicode/'
+  let url = 'http://viacep.com.br/ws/'+cep+'/json/unicodes/'
   console.log(url)
 
   let xmlHttp = new XMLHttpRequest()
@@ -17,10 +17,6 @@ function getDadosEnderecoPorCep(cep) {
       document.getElementById('bairro').value = dadosJSONObj.bairro
       document.getElementById('cidade').value = dadosJSONObj.localidade
       document.getElementById('uf').value = dadosJSONObj.uf
-    }
-
-    if(xmlHttp.readyState == 4 && xmlHttp.status == 404){
-      document.getElementById('conteudo').innerHTML = 'Ops... aconteceu um problema, tente mais tarde.'
     }
   }
   xmlHttp.send()
